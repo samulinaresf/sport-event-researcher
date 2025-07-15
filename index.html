@@ -4,11 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Film Research</title>
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
     <div class="layout">
-        <h1>Buscador de películas</h1>
-        <nav class="nav-bar">
+        <header class="header">
+            <img src="img/logo.png" alt="Logo de Film Researcher">
+            <h1>Film researcher</h1>
+        </header>
+        <nav class="nav">
             <ul>
                 <li><a href="#">Inicio</a></li>
                 <li><a href="#">Películas</a></li>
@@ -16,41 +20,43 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
         </nav>
-        <section>
+        <section class="content">
             <h2>Mis pelis</h2>
-            <article>
-                <h3>Peli 1</h3>
-                <p>Descripción peli 1</p>
-                <button class="edit-film">Editar</button>
-                <button class="delete-film">Eliminar</button>
-            </article>
-            <article>
-                <h3>Peli 2</h3>
-                <p>Descripción peli 1</p>
-                <button class="edit-film">Editar</button>
-                <button class="delete-film">Eliminar</button>
-            </article>
-            <article>
-                <h3>Peli 3</h3>
-                <p>Descripción peli 1</p>
-                <button class="edit-film">Editar</button>
-                <button class="delete-film">Eliminar</button>
-            </article>
+            <div class="film-items">
+                <article>
+                    <h3>Peli 1</h3>
+                    <p>Descripción peli 1</p>
+                    <button class="edit-film">Editar</button>
+                    <button class="delete-film">Eliminar</button>
+                </article>
+                <article>
+                    <h3>Peli 2</h3>
+                    <p>Descripción peli 1</p>
+                    <button class="edit-film">Editar</button>
+                    <button class="delete-film">Eliminar</button>
+                </article>
+                <article>
+                    <h3>Peli 3</h3>
+                    <p>Descripción peli 1</p>
+                    <button class="edit-film">Editar</button>
+                    <button class="delete-film">Eliminar</button>
+                </article>
+            </div>
         </section>
-        <aside>
+        <aside class="lateral">
             <div class="search">
                 <h3>Buscador</h3>
                 <input class="search-input" placeholder="Título de la película">
                 <button class="search-button">Buscar</button>
             </div>
-            <div>
-                <h3 class="create-film">Subir pelis</h3>
-                <input class="create-film-title">
+            <div class="create-film">
+                <h3>Subir pelis</h3>
+                <input class="create-film-title" placeholder="Título">
                 <textarea class="create-film-description" placeholder="Descripción"></textarea>
                 <button class="create-film-button">Subir</button>
             </div>
         </aside>
-        <footer>&copy; Samuel Linares 2025</footer>
+        <footer class="footer">&copy; Samuel Linares 2025</footer>
     </div>
 </body>
 </html>

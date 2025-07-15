@@ -1,0 +1,189 @@
+/*Estilos generales*/
+body{
+    --background-color-layout: rgb(235, 235, 235);
+    --main-color:#0078FF;
+    --second-color:white;
+    --color-hover:rgb(244, 244, 45);
+    --footer-background-color:rgb(97, 197, 254);
+    --footer-color: rgb(159, 107, 40);
+    font-family: sans-serif, Arial, Helvetica;
+    text-align: center;
+    padding:0px;
+    margin:0px;
+}
+
+.layout{
+    width:100%;
+    height: auto;
+    background-color: var(--background-color-layout);
+    display: grid;
+    grid-template-areas:
+        "header header header header"
+        "nav nav nav nav"
+        "content content content lateral"
+        "footer footer footer footer"
+    ;
+    grid-template-rows: 100px 50px auto 50px;
+}
+
+/*Estilos de la cabecera*/
+.header{
+    grid-area: header;
+    background-color: var(--second-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header > img{
+    width:50px;
+    height: auto;
+}
+
+.header > h1{
+    color: var(--main-color);
+}
+
+/*Estilos de la barra de navegación*/
+.nav{
+    grid-area: nav;
+    background-color: var(--main-color);
+}
+
+.nav > ul{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+}
+
+.nav > ul > li{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.nav > ul > li > a{
+    text-decoration: none;
+    color: var(--second-color);
+    font-weight: lighter;
+}
+
+.nav > ul > li > a:hover{
+    color: var(--color-hover);
+    transform: scale(1.3,1.3);
+    transition-duration: 1s;
+    text-shadow: 1px 1px 2px #fff;
+    font-size: 17px;
+}
+
+/*Estilos del contenido principal*/
+.content{
+    grid-area: content;
+    background-color: var(--background-color-layout);
+    border: 2px solid #1a1a1a;
+}
+
+.content > h2{
+    justify-content: center;
+    width: 100%;
+}
+
+.film-items{
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.film-items > article{
+    border-top: #000;
+    border-left: #000;
+    border-bottom: transparent;
+    border-right: transparent;
+    border-radius: 20px;
+    background-color: #ffffffe0;
+    width: 200px;
+    flex-grow: 1;
+    margin:20px;
+    height: auto;
+    padding: 20px;
+}
+
+.film-items > article > button{
+    background-color: var(--main-color);
+    color: var(--second-color);
+    border-radius: 5px;
+    padding: 15px;
+}
+
+.edit-film:hover{
+    background-color: #ff771d;
+    color:#000;
+    transition-duration: 1s;
+}
+.delete-film:hover{
+    background-color: #ff1d1d;
+    color:#000;
+    transition-duration:1s;
+}
+
+/*Estilos de la barra lateral*/
+.lateral{
+    grid-area: lateral;
+    background-color: var(--background-color-layout);
+    border: 2px solid #1a1a1a;
+    border-left: transparent;
+    display:flex;
+    flex-direction: column;
+}
+
+.lateral > div {
+    border-radius: 20px;
+    background-color: #ffffffe0;
+    width: 400px;
+    flex-grow: 1;
+    margin:40px;
+    height: auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.lateral > div > input, .lateral > div > textarea{
+    width: 300px;
+    height: auto;
+    margin: 30px;
+    border: 2px solid var(--main-color);
+    background-color: var(--background-color-layout);
+}
+
+::placeholder {
+  color: #727272;
+  font-family: Arial, Helvetica, sans-serif;
+
+}
+
+.lateral > div > button {
+    background-color: var(--main-color);
+    color: var(--second-color);
+    border-radius: 5px;
+    padding: 15px;
+    font-weight: bold;
+    width: 100px;
+    justify-content: center;
+    margin: auto;
+}
+
+.lateral > div > button:hover {
+    background-color: var(--background-color-layout);
+    color: var(--main-color);
+    transition-duration: 1s;
+}
+
+/*Estilos del footer*/
+.footer{
+    grid-area: footer;
+    background-color: var(--footer-background-color);
+    color: var(--footer-color);
+    padding: 5px;
+    align-items: center;
+}
