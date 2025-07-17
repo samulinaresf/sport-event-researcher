@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { SaveEventsInLocalStorage } from '../helpers/SaveEventsInLocalStorage';
 
 export const CreateNewEvent = () => {
     const [newEventState, setNewEventState] = useState({
@@ -27,15 +28,22 @@ export const CreateNewEvent = () => {
 
         setNewEventState(newEvent)
 
-        console.log(newEventState)
+        console.log(newEvent)
+
+        SaveEventsInLocalStorage("eventos",newEvent);
         
-    } 
+    }
+    
+    
+
+    
 
   return (
     <>
         <div className="create-sport">
                 <h3>Crear nuevo evento</h3>
                 <form onSubmit={getFormData}>
+                    {(newEventState.name && newEventState.date && newEventState.type && newEventState.host && newEventState.description) && newEventState.name}
                     <input id='create-event-name' name='eventName' className="create-event-name" placeholder="Deporte" />
                     <input id='create-event-date' name='eventDate' className="create-event-date" placeholder="Fecha" />
                     <input id='create-event-type' name='eventType' className="create-event-type" placeholder="Tipo" />
