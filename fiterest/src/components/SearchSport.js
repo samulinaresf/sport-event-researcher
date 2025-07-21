@@ -3,7 +3,7 @@ import React from 'react'
 export const SearchSport = () => {
   return (
     <>
-        <div className="search">
+        <div className="search-sport">
                 <h3>Buscador</h3>
                 <form>
                     <input className="search-input" placeholder="Nombre del deporte" />

@@ -1,8 +1,9 @@
 import React, { useState } from 'react'
 import { SaveEventsInLocalStorage } from '../helpers/SaveEventsInLocalStorage';
 
-export const CreateNewEvent = () => {
+export const CreateNewEvent = ({setListOfEventsState}) => {
     const [newEventState, setNewEventState] = useState({
+            id:'',
             name:'',
             date:'',
             type:'',
@@ -12,6 +13,7 @@ export const CreateNewEvent = () => {
     let getFormData = (e) => {
 
         e.preventDefault();
+        let eventId = Date.now()
         let eventName = e.target.eventName.value
         let eventDate = e.target.eventDate.value
         let eventType = e.target.eventType.value
@@ -19,6 +21,7 @@ export const CreateNewEvent = () => {
         let eventDescription = e.target.eventDescription.value
         
         let newEvent = {
+            eventId,
             eventName,
             eventDate,
             eventType,
@@ -29,6 +32,10 @@ export const CreateNewEvent = () => {
         setNewEventState(newEvent)
 
         console.log(newEvent)
+
+        setListOfEventsState(itemsInLocalStorage => {
+            return[...itemsInLocalStorage, newEvent];
+        })
 
         SaveEventsInLocalStorage("eventos",newEvent);
         

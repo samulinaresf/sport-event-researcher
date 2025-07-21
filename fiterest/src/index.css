@@ -94,7 +94,7 @@ body{
 .content{
     grid-area: content;
     background-color: var(--background-color-layout);
-    border: 2px solid #1a1a1a;
+    border: 2px solid #dcdcdc;
 }
 
 .content > h2{
@@ -145,7 +145,7 @@ body{
 .lateral{
     grid-area: lateral;
     background-color: var(--background-color-layout);
-    border: 2px solid #1a1a1a;
+    border: 2px solid #dcdcdc;
     border-left: transparent;
     display:flex;
     flex-direction: column;
@@ -193,6 +193,14 @@ body{
     background-color: var(--background-color-layout);
     color: var(--main-color);
     transition-duration: 1s;
+}
+
+.search-sport{
+    max-height: 400px;
+}
+
+.create-sport{
+    max-height: 600px;
 }
 
 /*Estilos del footer*/

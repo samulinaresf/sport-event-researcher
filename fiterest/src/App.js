@@ -1,8 +1,11 @@
+import { useState } from "react";
 import { CreateNewEvent } from "./components/CreateNewEvent";
 import { ListOfSports } from "./components/ListOfSports";
 import { SearchSport } from "./components/SearchSport";
 
+
 function App() {
+    const [listOfEventsState, setListOfEventsState] = useState([])
   return (
     <div className="layout">
         <header className="header">
@@ -19,11 +22,14 @@ function App() {
         </nav>
         <section className="content">
             <h2>Mis deportes</h2>
-            <ListOfSports />
+            <div className="sport-items">
+                <ListOfSports listOfEventsState={listOfEventsState} setListOfEventsState={setListOfEventsState}/>
+            </div>
+            
         </section>
         <aside className="lateral">
             <SearchSport />
-            <CreateNewEvent />
+            <CreateNewEvent setListOfEventsState={setListOfEventsState}/>
         </aside>
         <footer className="footer">&copy; Samuel Linares 2025</footer>
     </div>
