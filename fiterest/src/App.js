@@ -28,7 +28,7 @@ function App() {
             
         </section>
         <aside className="lateral">
-            <SearchSport />
+            <SearchSport listOfEventsState={listOfEventsState} setListOfEventsState={setListOfEventsState}/>
             <CreateNewEvent setListOfEventsState={setListOfEventsState}/>
         </aside>
         <footer className="footer">&copy; Samuel Linares 2025</footer>

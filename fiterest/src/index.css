@@ -135,10 +135,49 @@ body{
     color:#000;
     transition-duration: 1s;
 }
+
+.edit-event-button:hover {
+    background-color: var(--background-color-layout);
+    color: var(--main-color);
+    transition-duration: 1s;
+}
+
 .delete-sport:hover{
     background-color: #ff1d1d;
     color:#000;
     transition-duration:1s;
+}
+
+.edit-event-form{
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+}
+
+.edit-event-field{
+    width: auto;
+    height: auto;
+    flex-flow: nowrap;
+    margin: 30px;
+    border: 2px solid var(--main-color);
+    background-color: var(--background-color-layout);
+}
+
+.edit-event-button {
+    background-color: var(--main-color);
+    color: var(--second-color);
+    border-radius: 5px;
+    padding: 15px;
+    font-weight: bold;
+    width: 100px;
+    justify-content: center;
+    margin: auto;
+}
+
+.edit-event-button:hover {
+    background-color: var(--background-color-layout);
+    color: var(--main-color);
+    transition-duration: 1s;
 }
 
 /*Estilos de la barra lateral*/
@@ -164,6 +203,10 @@ body{
     justify-content: center;
 }
 
+.lateral > div > form{
+    flex-direction: column;
+}
+
 .lateral > div > form > input, .lateral > div > form > textarea{
     width: 300px;
     height: auto;
@@ -178,7 +221,7 @@ body{
 
 }
 
-.lateral > div > form > button {
+.create-event-button, .search-button{
     background-color: var(--main-color);
     color: var(--second-color);
     border-radius: 5px;
@@ -189,10 +232,19 @@ body{
     margin: auto;
 }
 
-.lateral > div > form > button:hover {
+.create-event-button:hover, .search-button:hover{
     background-color: var(--background-color-layout);
     color: var(--main-color);
     transition-duration: 1s;
+}
+
+.delete-filter-button{
+    background-color: #f48d8d;
+    color:#6c6c6c;
+    border-radius: 5px;
+    flex-direction: column;
+    border:transparent;
+    margin-top: 5px;
 }
 
 .search-sport{
