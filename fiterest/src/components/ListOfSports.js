@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { EditEvent } from './EditEvent'
+import { EditEvent } from './Sports/EditEvent'
 
 export const ListOfSports = ({listOfEventsState,setListOfEventsState}) => {
-
     useEffect(() => {
         getEventsFromLocalStorage()
         //Usar esto para limpiar el Local Storage cuando haga falta => localStorage.clear()
@@ -39,6 +38,7 @@ export const ListOfSports = ({listOfEventsState,setListOfEventsState}) => {
         {listOfEventsState != null ?
             listOfEventsState.map(eventos => {
             return(
+                <>
                 <article key={eventos.eventId}>
                     <h3 id='nameOfSportEvent' name='nameOfSportEvent'>{eventos.eventName}</h3>
                     <p id='idOfSportEvent' name='idOfSportEvent'>{eventos.eventId}</p>
@@ -51,6 +51,7 @@ export const ListOfSports = ({listOfEventsState,setListOfEventsState}) => {
 
                     {(eventos.eventId === editEventState) && <EditEvent eventos={eventos} setEditEventState={setEditEventState} setListOfEventsState={setListOfEventsState}/>}
                 </article> 
+                </>
             )
         })
         :<h2>No se han encontrado resultados</h2>

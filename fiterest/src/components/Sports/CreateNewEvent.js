@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { SaveEventsInLocalStorage } from '../helpers/SaveEventsInLocalStorage';
+import { SaveEventsInLocalStorage } from '../../helpers/SaveEventsInLocalStorage';
 
 export const CreateNewEvent = ({setListOfEventsState}) => {
     const [newEventState, setNewEventState] = useState({
