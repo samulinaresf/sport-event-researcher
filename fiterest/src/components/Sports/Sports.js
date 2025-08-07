@@ -1,6 +1,6 @@
 import React, { useState} from 'react'
 import { CreateNewEvent } from "./CreateNewEvent";
-import { ListOfSports } from "../ListOfSports";
+import { ListOfSports } from "./ListOfSports";
 import { SearchSport } from "./SearchSport";
 
 export const Sports = () => {

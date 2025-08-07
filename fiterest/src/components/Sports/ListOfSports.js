@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { EditEvent } from './Sports/EditEvent'
+import { EditEvent } from './EditEvent'
 
 export const ListOfSports = ({listOfEventsState,setListOfEventsState}) => {
     useEffect(() => {

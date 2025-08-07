@@ -90,7 +90,18 @@ body{
     font-size: 17px;
 }
 
+.active{
+    color: gold;
+    font-weight: bold;
+}
+
 /*Estilos del contenido principal*/
+
+.wide-content {
+  grid-area: content;
+  grid-column: 1 / 5;
+}
+
 .content{
     grid-area: content;
     background-color: var(--background-color-layout);
@@ -221,7 +232,7 @@ body{
 
 }
 
-.create-event-button, .search-button{
+.create-event-button, .search-button, .contact-form-button{
     background-color: var(--main-color);
     color: var(--second-color);
     border-radius: 5px;
@@ -232,7 +243,38 @@ body{
     margin: auto;
 }
 
-.create-event-button:hover, .search-button:hover{
+
+
+.contact-form {
+    flex-direction: column;
+    padding: 20px;
+    margin:100px;
+    height: auto;
+    width: auto;
+    justify-content: center;
+    align-items: center;
+}
+
+.contact-form > form {
+    flex-direction: column;
+    padding:100px;
+    background-color: #fff;
+
+}
+
+.contact-form > form > input, .contact-form > form > textarea{
+    width: 300px;
+    height: auto;
+    margin: 30px;
+    border: 2px solid var(--main-color);
+    background-color: var(--background-color-layout);
+}
+
+.contact-form > form > label{
+    margin:30px;
+}
+
+.create-event-button:hover, .search-button:hover, .contact-form-button:hover{
     background-color: var(--background-color-layout);
     color: var(--main-color);
     transition-duration: 1s;
