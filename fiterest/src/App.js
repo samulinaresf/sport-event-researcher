@@ -20,7 +20,7 @@ function App() {
         </nav>
           <MainRouter />
 
-                
+        
 
         <footer className="footer">&copy; Samuel Linares 2025</footer>
     </div>

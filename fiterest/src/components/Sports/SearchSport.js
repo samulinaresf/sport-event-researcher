@@ -50,7 +50,7 @@ export const SearchSport = ({listOfEventsState,setListOfEventsState,eventos}) =>
         <div className="search-sport" >
                 <h3>Buscador</h3>
                 <form onSubmit={searchEvent}>
-                    <input className="search-input" name='searchInput' id='searchInput' autoComplete='off' placeholder="Nombre del deporte o anfitrión" value={search} onChange={handleChange}/>
+                    <input className="search-input" name='searchInput' id='searchInput' autoComplete='off' placeholder="Ej: Running" value={search} onChange={handleChange}/>
                     <button className="search-button">Buscar</button><br></br>
                     {showDeleteFilter  && (<button className='delete-filter-button' onClick={deleteFilter}>x {search}</button>)
                     }
