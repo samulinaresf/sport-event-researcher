@@ -30,6 +30,7 @@ body{
 .layout{
     width:100%;
     height: auto;
+    min-height: 100dvh;
     background-color: var(--background-color-layout);
     display: grid;
     grid-template-areas:
@@ -38,7 +39,7 @@ body{
         "content content content lateral"
         "footer footer footer footer"
     ;
-    grid-template-rows: 100px 50px auto 50px;
+    grid-template-rows: 100px 50px 1fr 50px;
 }
 
 /*Estilos de la cabecera*/
@@ -60,6 +61,59 @@ body{
 }
 
 /*Estilos de la barra de navegación*/
+
+.languageMenuContainer {
+  position: relative;
+  display: inline-block;
+  right: 0;
+}
+
+.languageMenuContainer > ul > li{
+    background-color: transparent;
+    border: transparent;
+    padding:0;
+    right: 0;
+    justify-content: center;
+}
+
+.languageButton{
+    border: transparent;
+    background-color: transparent;
+    padding: 0;
+}
+
+#selectLanguageMenu {
+    padding: 5px;
+    background-color: var(--orange-color);
+    color: var(--second-color);
+    border-radius: 5px;
+    width: 100%;
+}
+
+.languageButtonListUnfocus {
+  display: none;
+  transition-duration: 1s;
+}
+
+.languageButtonListFocus { 
+  display: block;
+  position: absolute;
+  list-style: none;
+  margin: 8px 0 0;
+  padding: 8px;
+  gap: 8px;
+  border-radius: 8px;
+  box-shadow: 0 6px 18px rgba(0,0,0,.12);
+  transition-duration: 1s;
+}
+
+.languageButton img {
+  width: 30px;
+  height: 30px;
+  display: block;
+}
+
+
 .nav{
     grid-area: nav;
     background-color: var(--main-color);
@@ -70,11 +124,16 @@ body{
     justify-content: center;
     align-items: center;
     list-style: none;
+    width: 100%;
+    justify-content: space-between;
+    gap: 0; 
+    padding: 0;
 }
 
 .nav > ul > li{
-    margin-left: 20px;
-    margin-right: 20px;
+    flex: 1 1 0;         
+    text-align: center; 
+    margin: 0;   
 }
 
 .nav > ul > li > a{
@@ -349,7 +408,6 @@ body{
     .lateral > div > form > input, .lateral > div > form > textarea{
         width: 150px;
     }
-    
 
     .sport-items { 
         display: flex;

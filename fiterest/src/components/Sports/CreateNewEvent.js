@@ -1,5 +1,7 @@
 import React, { useState } from 'react'
 import { SaveEventsInLocalStorage } from '../../helpers/SaveEventsInLocalStorage';
+import { T } from "../../config/T";
+
 
 export const CreateNewEvent = ({setListOfEventsState}) => {
     const [newEventState, setNewEventState] = useState({
@@ -48,15 +50,15 @@ export const CreateNewEvent = ({setListOfEventsState}) => {
   return (
     <>
         <div className="create-sport">
-                <h3>Crear nuevo evento</h3>
+                <h3><T i18nKey="events.create.title" defaultText="Crear un nuevo evento" /></h3>
                 <form onSubmit={getFormData}>
                     {(newEventState.name && newEventState.date && newEventState.type && newEventState.host && newEventState.description) && newEventState.name}
-                    <input id='create-event-name' name='eventName' className="create-event-name" placeholder="Deporte" />
-                    <input id='create-event-date' name='eventDate' className="create-event-date" placeholder="Fecha" />
-                    <input id='create-event-type' name='eventType' className="create-event-type" placeholder="Tipo" />
-                    <input id='create-event-host' name='eventHost' className="create-event-host" placeholder="Anfitrión" />
+                    <input id='create-event-name' name='eventName' className="create-event-name" placeholder={<T i18nKey="events.create.field.name.placeholder" defaultText="Deporte" />} />
+                    <input id='create-event-date' name='eventDate' className="create-event-date" placeholder={<T i18nKey="events.create.field.date.placeholder" defaultText="Fecha" />} />
+                    <input id='create-event-type' name='eventType' className="create-event-type" placeholder={<T i18nKey="events.create.field.type.placeholder" defaultText="Tipo" />} />
+                    <input id='create-event-host' name='eventHost' className="create-event-host" placeholder={<T i18nKey="events.create.field.host.placeholder" defaultText="Anfitrión" />} />
                     <textarea id='create-event-description' name='eventDescription' className="create-event-description" placeholder="Descripción"></textarea>
-                    <button id='create-event-button' name='create-event-button' className="create-event-button">Subir</button>
+                    <button id='create-event-button' name='create-event-button' className="create-event-button">{<T i18nKey="events.create.button.submit" defaultText="Subir" />}</button>
                 </form>  
         </div>
     </>

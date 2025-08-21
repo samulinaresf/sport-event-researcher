@@ -4,6 +4,7 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { createRoot } from 'react-dom/client';
+import './config/i18next.config'
 
 const container = document.getElementById('root')
 const root = createRoot(container);

@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from 'react'
 import { EditEvent } from './EditEvent'
+import { T } from "../../config/T";
 
 export const ListOfSports = ({listOfEventsState,setListOfEventsState}) => {
     useEffect(() => {
@@ -46,15 +47,15 @@ export const ListOfSports = ({listOfEventsState,setListOfEventsState}) => {
                     <p id='typeOfSportEvent' name='typeOfSportEvent'>{eventos.eventType}</p>
                     <p id='hostOfSportEvent' name='hostOfSportEvent'>{eventos.eventHost}</p>
                     <p id='descriptionOfSportEvent' name='descriptionOfSportEvent'>{eventos.description}</p>
-                    <button className="edit-sport" onClick={(e)=>editEventFromLocalStorage(e,eventos.eventId)}>Editar</button>
-                    <button className="delete-sport" onClick={()=>deleteEventFromLocalStorage(eventos.eventId)}>Eliminar</button>
+                    <button className="edit-sport" onClick={(e)=>editEventFromLocalStorage(e,eventos.eventId)}>{<T i18nKey="events.list.button.edit" defaultText="Editar" />}</button>
+                    <button className="delete-sport" onClick={()=>deleteEventFromLocalStorage(eventos.eventId)}>{<T i18nKey="events.list.button.delete" defaultText="Eliminar" />}</button>
 
                     {(eventos.eventId === editEventState) && <EditEvent eventos={eventos} setEditEventState={setEditEventState} setListOfEventsState={setListOfEventsState}/>}
                 </article> 
                 </>
             )
         })
-        :<h2>No se han encontrado resultados</h2>
+        :<h2>{<T i18nKey="events.list.empty" defaultText="No se han encontrado resultados" />}</h2>
     }
     </>
   )

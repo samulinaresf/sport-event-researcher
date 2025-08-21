@@ -1,4 +1,5 @@
 import React from 'react'
+import { T } from "../../config/T";
 
 export const EditEvent = ({eventos,setListOfEventsState,setEditEventState}) => {
 
@@ -34,7 +35,7 @@ export const EditEvent = ({eventos,setListOfEventsState,setEditEventState}) => {
             <input id='edit-event-type' name='eventType' className="edit-event-field" defaultValue={eventos.eventType} />
             <input id='edit-event-host' name='eventHost' className="edit-event-field" defaultValue={eventos.eventHost} />
             <textarea id='edit-event-description' name='eventDescription' className="edit-event-field" defaultValue={eventos.eventDescription}></textarea>
-            <button id='edit-event-button' name='edit-event-button' className="edit-event-button">Actualizar</button>
+            <button id='edit-event-button' name='edit-event-button' className="edit-event-button">{<T i18nKey="events.edit.button.update" defaultText="Actualizar" />}</button>
         </form>
     </div>
   )

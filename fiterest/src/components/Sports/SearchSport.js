@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import { T } from "../../config/T";
 
 export const SearchSport = ({listOfEventsState,setListOfEventsState,eventos}) => {
 
@@ -48,10 +49,10 @@ export const SearchSport = ({listOfEventsState,setListOfEventsState,eventos}) =>
   return (
     <>
         <div className="search-sport" >
-                <h3>Buscador</h3>
+                <h3>{<T i18nKey="events.search.title" defaultText="Buscador" />}</h3>
                 <form onSubmit={searchEvent}>
-                    <input className="search-input" name='searchInput' id='searchInput' autoComplete='off' placeholder="Ej: Running" value={search} onChange={handleChange}/>
-                    <button className="search-button">Buscar</button><br></br>
+                    <input className="search-input" name='searchInput' id='searchInput' autoComplete='off' placeholder={<T i18nKey="events.search.input.placeholder" defaultText="Ej: Running" />} value={search} onChange={handleChange}/>
+                    <button className="search-button">{<T i18nKey="events.search.button.search" defaultText="Buscar" />}</button><br></br>
                     {showDeleteFilter  && (<button className='delete-filter-button' onClick={deleteFilter}>x {search}</button>)
                     }
                 </form>  

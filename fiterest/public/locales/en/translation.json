@@ -1,0 +1,61 @@
+{
+  "common": {
+    "brand.name": "Fiterest",
+    "header.title": "Fiterest",
+    "logo.alt": "Fiterest logo",
+    "footer.copyright": "© {{name}} {{year}}"
+  },
+  "nav": {
+    "home": "Home",
+    "sports": "Sports",
+    "blog": "Blog",
+    "contact": "Contact",
+    "profile": "Profile",
+    "language":"Language"
+  },
+  "sports": {
+    "page": { "title": "Sports events" }
+  },
+  "events": {
+    "create": {
+      "title": "Create new event",
+      "field.name.placeholder": "Sport",
+      "field.date.placeholder": "Date",
+      "field.type.placeholder": "Type",
+      "field.host.placeholder": "Host",
+      "field.description.placeholder": "Description",
+      "button.submit": "Publish"
+    },
+    "edit": {
+      "title": "Edit event",
+      "button.update": "Update"
+    },
+    "list": {
+      "empty": "No results found",
+      "button.edit": "Edit",
+      "button.delete": "Delete"
+    },
+    "fields": {
+      "name": "Name",
+      "id": "ID",
+      "date": "Date",
+      "type": "Type",
+      "host": "Host",
+      "description": "Description"
+    },
+    "search": {
+      "title": "Search",
+      "input.placeholder": "e.g., Running",
+      "button.search": "Search",
+      "button.clear": "× {{query}}"
+    }
+  },
+  "contact": {
+    "title":"Fill out this form",
+    "name": "Name",
+    "email": "Email",
+    "message": "Message",
+    "contact": "Contact",
+    "send":"Enviar"
+  }
+}

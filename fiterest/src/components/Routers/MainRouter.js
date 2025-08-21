@@ -4,6 +4,7 @@ import { Home } from "../Home/Home";
 import { Sports } from "../Sports/Sports";
 import { Blog } from "../Blog";
 import { Contact } from "../Contact";
+import { Session } from "../Session/Session";
 
 
 export const MainRouter = () => {
@@ -15,6 +16,7 @@ export const MainRouter = () => {
             <Route path="/deportes" element={<Sports></Sports>} />
             <Route path="/blog" element={<Blog></Blog>} />
             <Route path="/contacto" element={<Contact></Contact>} />
+            <Route path="/perfil" element={<Session></Session>} />
         </Routes>
     </>
   )

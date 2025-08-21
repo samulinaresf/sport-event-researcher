@@ -2,6 +2,7 @@ import { Contact } from "./components/Contact";
 import { MainRouter } from "./components/Routers/MainRouter";
 import { Navigation } from "./components/Routers/Navigation";
 import { BrowserRouter } from 'react-router-dom'
+import { useTranslation } from "react-i18next";
 
 
 

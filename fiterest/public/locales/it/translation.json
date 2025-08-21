@@ -1,0 +1,61 @@
+{
+  "common": {
+    "brand.name": "Fiterest",
+    "header.title": "Fiterest",
+    "logo.alt": "Logo Fiterest",
+    "footer.copyright": "© {{name}} {{year}}"
+  },
+  "nav": {
+    "home": "Inizio",
+    "sports": "Sport",
+    "blog": "Blog",
+    "contact": "Contatti",
+    "profile": "Profilo",
+    "language":"Lingua"
+  },
+  "sports": {
+    "page": { "title": "Eventi sportivi" }
+  },
+  "events": {
+    "create": {
+      "title": "Crea nuovo evento",
+      "field.name.placeholder": "Sport",
+      "field.date.placeholder": "Data",
+      "field.type.placeholder": "Tipo",
+      "field.host.placeholder": "Organizzatore",
+      "field.description.placeholder": "Descrizione",
+      "button.submit": "Pubblica"
+    },
+    "edit": {
+      "title": "Modifica evento",
+      "button.update": "Aggiorna"
+    },
+    "list": {
+      "empty": "Nessun risultato trovato",
+      "button.edit": "Modifica",
+      "button.delete": "Elimina"
+    },
+    "fields": {
+      "name": "Nome",
+      "id": "ID",
+      "date": "Data",
+      "type": "Tipo",
+      "host": "Organizzatore",
+      "description": "Descrizione"
+    },
+    "search": {
+      "title": "Cerca",
+      "input.placeholder": "es.: Corsa",
+      "button.search": "Cerca",
+      "button.clear": "× {{query}}"
+    }
+  },
+  "contact": {
+    "title":"Compila questo modulo",
+    "name": "Nome",
+    "email": "Email",
+    "message": "Messaggio",
+    "contact": "Contatto",
+    "send": "Invia"
+  }
+}
