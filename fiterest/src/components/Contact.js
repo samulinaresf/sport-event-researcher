@@ -5,7 +5,7 @@ import { T } from "../config/T";
 export const Contact = () => {
   return (
     <>
-      <section className='wide-content'>
+      <section className='wideContent'>
         <div className="contact-form">
           <form action="https://formsubmit.co/samuel13tf@gmail.com" method="POST">
             <h3>{<T i18nKey="contact.title" defaultText="Rellena este formulario" />}</h3>

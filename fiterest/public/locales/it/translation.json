@@ -57,5 +57,14 @@
     "message": "Messaggio",
     "contact": "Contatto",
     "send": "Invia"
+  },
+  "home": {
+    "slogan": "Il tuo sito di recensioni di eventi sportivi.",
+    "menu": {
+      "latest": "Vedi gli ultimi eventi",
+      "upload": "Carica il tuo evento",
+      "buyCoffee": "Offrimi un caffè",
+      "leaveReview": "Lascia una recensione"
+    }
   }
 }

@@ -57,5 +57,14 @@
     "message": "Message",
     "contact": "Contact",
     "send":"Enviar"
+  },
+  "home": {
+    "slogan": "Your website for sports event reviews.",
+    "menu": {
+      "latest": "View latest events",
+      "upload": "Post your event",
+      "buyCoffee": "Buy me a coffee",
+      "leaveReview": "Leave a review"
+    }
   }
 }

@@ -57,5 +57,14 @@
     "message": "Message",
     "contact": "Contact",
     "send": "Envoyer"
+  },
+  "home": {
+    "slogan": "Votre site d’avis sur les événements sportifs.",
+    "menu": {
+      "latest": "Voir les derniers événements",
+      "upload": "Publiez votre événement",
+      "buyCoffee": "Offrez-moi un café",
+      "leaveReview": "Laissez un avis"
+    }
   }
 }

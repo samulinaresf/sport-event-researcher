@@ -2,8 +2,6 @@ import { Contact } from "./components/Contact";
 import { MainRouter } from "./components/Routers/MainRouter";
 import { Navigation } from "./components/Routers/Navigation";
 import { BrowserRouter } from 'react-router-dom'
-import { useTranslation } from "react-i18next";
-
 
 
 function App() {
@@ -20,9 +18,6 @@ function App() {
           <Navigation />
         </nav>
           <MainRouter />
-
-        
-
         <footer className="footer">&copy; Samuel Linares 2025</footer>
     </div>
     </BrowserRouter>

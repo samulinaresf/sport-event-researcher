@@ -154,7 +154,7 @@ body{
 
 /*Estilos del contenido principal*/
 
-.wide-content {
+.wideContent {
   grid-area: content;
   grid-column: 1 / 5;
 }
@@ -248,11 +248,90 @@ body{
     transition-duration: 1s;
 }
 
+/* Estilos del home */
+
+.homeSloganContainer{
+    background-image: url("../public/img/woman-running.jpg");
+    background-position: 72% 60%;
+    background-size: cover;
+    height: 300px;
+    margin:0;
+    padding-bottom:0 ;
+}
+
+.homeSloganContainer > p {
+    font-size: xx-large;
+    color: #ffffff;
+    margin-bottom: 130px;
+    margin-top: 0;
+}
+
+.homeMenu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.homeMenu > a{
+    text-decoration: none;
+}
+
+.homeMenuContainer{
+    height: 50px;
+    width: 250px;
+    flex-wrap: nowrap;
+    align-items: center;
+    position: relative;
+    border: 1px solid;
+    background-color: var(--second-color);
+}
+
+.latestEventsLink {
+    font-weight: 600;
+    color: var(--main-color);
+    background-color: var(--second-color);
+    margin: 0;
+    text-decoration: none;
+    font-size: larger;
+    font-family: sans-serif;
+    min-height: 100px;
+    min-width: 100%;
+    align-content: center;
+}
+
+.featuredEvents{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    justify-content: center;
+}
+
+.featuredEventsList{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 12px;
+    justify-content: space-evenly;
+    list-style: none;
+
+}
+
+.featuredEventsList > li{
+    border: 1px solid #000;
+    width: 20%;
+    background-color: var(--second-color);
+}
+
+.featuredEventsListContainer > img {
+    width: 100%;
+    box-sizing: border-box;
+}
+
 /*Estilos de la barra lateral*/
 .lateral{
     grid-area: lateral;
     background-color: var(--background-color-layout);
-    border: 2px solid #dcdcdc;
+    border: 2px solid #000000;
     border-left: transparent;
     display:flex;
     flex-direction: column;
@@ -353,6 +432,11 @@ body{
     max-height: 600px;
 }
 
+/*Social media*/
+.socialMediaIcon{
+    width: 30px;
+}
+
 /*Estilos del footer*/
 .footer{
     grid-area: footer;
@@ -417,6 +501,49 @@ body{
 
     .footer{
         margin-top: auto;
+    }
+
+    .homeSloganContainer{
+    background-image: url("../public/img/woman-running.jpg");
+    background-position: 72% 60%;
+    background-size: cover;
+    width: 100dvw;
+    margin:0;
+    padding-bottom:0 ;
+    }
+
+    .homeSloganContainer > p {
+        font-size: xx-large;
+        color: #ffffff;
+    }
+
+    .homeMenu{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .homeMenuContainer{
+        height: 40px;
+        width: 100dvw;
+        padding: 0;
+    }
+
+    .latestEventsLink{
+        min-height: 0;
+        min-width: 0;
+    }
+
+    .featuredEvents{
+        display: block;
+        margin-top: 120px;
+    }
+
+    .featuredEventsList{
+        flex-direction: column;
+    }
+
+    .featuredEventsList > li{
+        width: 80%;
     }
 
 }

@@ -2,6 +2,10 @@ import React from 'react'
 
 export const Session = () => {
   return (
-    <div>Session</div>
+    <>
+      <diV>
+        <img></img>
+      </diV>
+    </>
   )
 }

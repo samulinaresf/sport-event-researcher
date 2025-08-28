@@ -57,5 +57,14 @@
     "message": "Nachricht",
     "contact": "Kontakt",
     "send": "Senden"
+  },
+  "home": {
+    "slogan": "Deine Website für Bewertungen von Sportveranstaltungen.",
+    "menu": {
+      "latest": "Neueste Veranstaltungen ansehen",
+      "upload": "Event hinzufügen",
+      "buyCoffee": "Spendier mir einen Kaffee",
+      "leaveReview": "Hinterlasse eine Bewertung"
+    }
   }
 }
