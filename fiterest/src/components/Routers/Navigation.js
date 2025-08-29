@@ -38,11 +38,11 @@ export const Navigation = () => {
                     <div className='languageMenuConstainer'>
                         <button id='selectLanguageMenu' onClick={() => sliderMenu()}><T i18nKey="nav.language" defaultText="Idioma" /></button>
                         <ul className={ sliderMenuState ? 'languageButtonListFocus' : 'languageButtonListUnfocus'}>
-                            <li><button className='languageButton' onClick={() => changeTo('es')}><img src='/img/icon-lng-es.png'></img></button></li>
-                            <li><button className='languageButton' onClick={() => changeTo('en')}><img src='/img/icon-lng-en.png'></img></button></li>
-                            <li><button className='languageButton' onClick={() => changeTo('it')}><img src='/img/icon-lng-it.png'></img></button></li>
-                            <li><button className='languageButton' onClick={() => changeTo('fr')}><img src='/img/icon-lng-fr.png'></img></button></li>
-                            <li><button className='languageButton' onClick={() => changeTo('de')}><img src='/img/icon-lng-de.png'></img></button></li>
+                            <li><button className='languageButton' onClick={() => changeTo('es')}><img src='/img/icon-lng-es.png' alt='Icono idioma español'></img></button></li>
+                            <li><button className='languageButton' onClick={() => changeTo('en')}><img src='/img/icon-lng-en.png' alt='Icono idioma inglés'></img></button></li>
+                            <li><button className='languageButton' onClick={() => changeTo('it')}><img src='/img/icon-lng-it.png' alt='Icono idioma italiano'></img></button></li>
+                            <li><button className='languageButton' onClick={() => changeTo('fr')}><img src='/img/icon-lng-fr.png' alt='Icono idioma francés'></img></button></li>
+                            <li><button className='languageButton' onClick={() => changeTo('de')}><img src='/img/icon-lng-de.png' alt='Icono idioma alemán'></img></button></li>
                         </ul>
                     </div>
                 </li>

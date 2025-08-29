@@ -66,5 +66,21 @@
       "buyCoffee": "Buy me a coffee",
       "leaveReview": "Leave a review"
     }
+  },
+  "login": {
+    "title": "Sign in",
+    "username": "Username",
+    "password": "Password",
+    "send": "Sign in"
+  },
+  "register": {
+    "title": "Sign up",
+    "username": "Username",
+    "email": "Email",
+    "password": "Password",
+    "repeat": {
+      "password": "Repeat password"
+    },
+    "send": "Sign up"
   }
 }

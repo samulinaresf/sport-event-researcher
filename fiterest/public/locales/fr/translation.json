@@ -66,5 +66,22 @@
       "buyCoffee": "Offrez-moi un café",
       "leaveReview": "Laissez un avis"
     }
+  },
+  "login": {
+  "title": "Se connecter",
+  "username": "Nom d’utilisateur",
+  "password": "Mot de passe",
+  "send": "Se connecter"
+  },
+  "register": {
+    "title": "Inscription",
+    "username": "Nom d’utilisateur",
+    "email": "E-mail",
+    "password": "Mot de passe",
+    "repeat": {
+      "password": "Confirmer le mot de passe"
+    },
+    "send": "S’inscrire"
   }
+
 }

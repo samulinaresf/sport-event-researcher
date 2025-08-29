@@ -66,5 +66,22 @@
       "buyCoffee": "Offrimi un caffè",
       "leaveReview": "Lascia una recensione"
     }
-  }
+  },
+  "login": {
+  "title": "Accedi",
+  "username": "Nome utente",
+  "password": "Password",
+  "send": "Accedi"
+},
+"register": {
+  "title": "Registrati",
+  "username": "Nome utente",
+  "email": "Email",
+  "password": "Password",
+  "repeat": {
+    "password": "Ripeti password"
+  },
+  "send": "Registrati"
+}
+
 }

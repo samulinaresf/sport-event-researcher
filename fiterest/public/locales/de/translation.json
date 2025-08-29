@@ -66,5 +66,22 @@
       "buyCoffee": "Spendier mir einen Kaffee",
       "leaveReview": "Hinterlasse eine Bewertung"
     }
+  },
+  "login": {
+  "title": "Anmelden",
+  "username": "Benutzername",
+  "password": "Passwort",
+  "send": "Anmelden"
+  },
+  "register": {
+    "title": "Registrieren",
+    "username": "Benutzername",
+    "email": "E-Mail",
+    "password": "Passwort",
+    "repeat": {
+      "password": "Passwort wiederholen"
+    },
+    "send": "Registrieren"
   }
+
 }
