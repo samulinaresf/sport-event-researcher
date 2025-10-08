@@ -1,0 +1,104 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+  output   = "../generated/prisma"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
+}
+
+/**
+ * ===== Enums =====
+ */
+enum Role {
+  USER
+  HOST
+  ADMIN
+  SUPERADMIN
+}
+
+/**
+ * ===== Models =====
+ */
+model User {
+  id            Int      @id @default(autoincrement()) // PK autoincremental
+  email         String   @unique // único, pero opcional
+  name          String
+  profilePicUrl String?
+  role          Role     @default(USER) // enum con valor por defecto
+  createdAt     DateTime @default(now())
+  updatedAt     DateTime @updatedAt
+
+  // Relaciones
+  hostProfile HostProfile?
+  reviews     Review[] // 1 usuario → N reseñas
+  auditLogs   AuditLog[]
+}
+
+model HostProfile {
+  id            Int     @id @default(autoincrement())
+  userId        Int     @unique //1:1 con User
+  profilePicUrl String?
+  bio           String?
+  instagramUrl  String?
+  tiktokUrl     String?
+  youtubeUrl    String?
+  websiteUrl    String?
+  phoneNumber   String?
+  publicEmail   String? //Mostrar opción de usar el mismo email  
+  role          Role    @default(HOST)
+
+  //Relaciones
+  user       User       @relation(fields: [userId], references: [id], onDelete: Cascade)
+  reviews    Review[]   @relation("HostReviews")
+  categories Category[] // M:N
+}
+
+model Category {
+  id       Int        @id @default(autoincrement())
+  name     String
+  slug     String     @unique // para URLs tipo /categorias/yoga
+  parentId Int? // opcional: subcategorías
+  parent   Category?  @relation("CategoryToCategory", fields: [parentId], references: [id])
+  children Category[] @relation("CategoryToCategory")
+
+  hosts HostProfile[] // M:N inverso
+}
+
+model Review {
+  id        Int      @id @default(autoincrement())
+  authorId  Int
+  targetId  Int
+  rating    Int
+  comment   String?
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  author User        @relation(fields: [authorId], references: [id], onDelete: Cascade)
+  target HostProfile @relation("HostReviews", fields: [targetId], references: [id], onDelete: Cascade)
+
+  // Un mismo usuario solo puede reseñar una vez al mismo profesional
+  @@unique([authorId, targetId])
+  @@index([targetId])
+}
+
+model AuditLog {
+  id        Int      @id @default(autoincrement())
+  userId    Int?
+  action    String
+  entity    String
+  entityId  Int?
+  details   String
+  ipAddress String
+  createdAt DateTime @default(now())
+
+  user User? @relation(fields: [userId], references: [id], onDelete: SetNull)
+}
